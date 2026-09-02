@@ -1,0 +1,14 @@
+O que aprendemos até então nos permite então cobrir parte dos problemas computacionais que 
+surgem, mas ainda há situações que devem ser tratadas, dentre elas, a possibilidade do 
+programa executar um número n de instruções. Exemplo, um dos exercícios realizados na aula 
+2 tem o objetivo de calcular o reajuste do salário de um funcionário conforme o seu cargo, na
+resolução do exercício é apresentado um programa que executa o cálculo para 1 funcio-
+nário e encerra, bem, imagine então uma situação hipotética em que a empresa tenha
+que fazer o cálculo do reajuste para 50 funcionários, neste caso ela terá que executar o
+programa 50 vezes manualmente, pois o programa apresentado como solução não é
+capaz de automatizar essa operação para todos os funcionários.
+
+Então, para resolver esse problema computacional, é necessário lançar mão das
+estruturas de iteração que irão permitir que o nosso programa C tenha essa capacidade.
+Nesta aula serão apresentadas três estruturas de iteração, a estrutura while, a estrutura
+do-while e o for.
