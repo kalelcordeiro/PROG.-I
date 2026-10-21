@@ -1,0 +1,51 @@
+for (inicializacao; condicao de laco ou parada; incremento)
+    instrucao;
+
+Exemplo de for():
+    void main() {
+        int i;
+        for (i=10; i>=0; i--) {
+            printf("Numero: %d \n", i);
+        }
+    }
+
+
+while (condicao de laco ou parada) --> Continua rodando enquanto a condição dentro dele for verdadeira.
+    instrucao;
+
+Exemplo de while():
+    void main() {
+        int i=1, n, soma=0;
+
+        printf("Informe o numero n:");
+        scanf("%d", &n);
+
+        while (i <= n) {
+            soma += i;
+            i++;
+        }
+        printf("Soma: %d \n", soma);
+    }
+
+do {
+    instrucao;
+} while (condicao de laco ou parada);
+    --> A cláusula do-while é diferente do while em um detalhe apenas. O bloco de instruções
+    do do-while sempre executará ao menos uma vez, pois a condição no do-while é
+    avaliada após a execução, assim, mesmo que a condição, após avaliada, seja falsa, o
+    bloco já terá sido executado, desta forma, a condição falsa apenas impedirá uma nova
+    execução do bloco de instruções.
+
+Exemplo de do-while:
+    Faça um programa em linguagem C que permita entrar com números e imprimir o
+quadrado de cada número digitado até entrar um número múltiplo de 6 que deverá ter
+seu quadrado impresso também.
+
+void main() {
+    int num;
+    do {
+        printf("\n Digite um numero ou multiplo de 6 para encerrar:");
+        scanf("%d", &num);
+        printf("Quadrado: %d \n", num * num);
+    } while ((num % 6) != 0);
+}
