@@ -13,20 +13,31 @@ struct nome_estrutura {
 #include <string.h> //Biblioteca que permite armazenar um nome, por exemplo Kalel Moreira, 
 //no tipo char de maneira automática, sem precisar colocar letra por letra.
 
+struct departamento{
+    int cod;
+    char descricao[30];
+};
+
+struct cargo{
+    int cod;
+    char descricao[30];
+};
 struct funcionario { // struct define um novo tipo para o C que pode ter informações heterogênias.
     int cod;
     char nome[30];
     float salario;
-    int depto;
-    int cargo;
+    struct departamento;
+    struct cargo;
 };
 
 int main(){
     struct funcionario func1, func2; //Definindo 2 variáveis do tipo funcionário.
 
     //ATRIBUINDO DADOS A func1
-    func1.cod = 1; // --> Pra acessar o campo da variável utilizamos um ., ficando: nome.campo
-    strcpy(func1.nome, "João");
+    func1.cod = 1; // --> Pra acessar o campo da variável utilizamos um ponto, ficando: nome.campo
+
+    strcpy(func1.nome, "João");  // --> função que armazena letra por letra automaticamente
+    
     func1.salario = 1200;
     //IMPRIMINDO OS DADOS DE func1
     printf("Código: %d \n", func1.cod);
