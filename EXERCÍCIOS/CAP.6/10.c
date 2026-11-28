@@ -17,10 +17,11 @@ struct atleta {
 };
 
 int main(){
-    struct atleta atle[3];
-    int desord_idade[3], ord_idade[3], i, j, mais_velho=0, pos_mais_velho;
+    int qtd=5;
+    int desord_idade[qtd], i, j, mais_velho, pos_mais_velho;
+    struct atleta atle[qtd];
 
-    for(i=0; i<3; i++){
+    for(i=0; i<qtd; i++){
         printf("\nATLETA %d", i+1);
         printf("\nInforme o nome: ");
         scanf("%s", &atle[i].nome);
@@ -32,22 +33,22 @@ int main(){
         scanf("%f", &atle[i].altura);
 
         desord_idade[i] = atle[i].idade;
-        ord_idade[i] = 0;
     }
     
-    for(i=0; i<3; i++){
-        for(j=0; j<3; j++){
+    for(i=0; i<qtd; i++){
+        mais_velho = 0;
+        for(j=0; j<qtd; j++){
             if(desord_idade[j] > mais_velho){
                 mais_velho = desord_idade[j];
-                pos_mais_velho = i;
+                pos_mais_velho = j;
             }
         }
         desord_idade[pos_mais_velho] = 0;
-        ord_idade[i] = mais_velho;
-    }
 
-    for(i=0; i<3; i++){
-        printf("\n%d", ord_idade[i]);
+        printf("\n\nNome: %s", atle[pos_mais_velho].nome);
+        printf("\nEsporte: %s", atle[pos_mais_velho].esporte);
+        printf("\nIdade: %d", atle[pos_mais_velho].idade);
+        printf("\nAltura: %.2f", atle[pos_mais_velho].altura);
     }
 
     return 0;
